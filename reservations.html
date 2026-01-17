@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reservations | LUXE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Work+Sans:wght@200;300;400;600&family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "secondary": "#a6a6a6",
+                        "accent-dark": "#1a1a1a",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#121212",
+                        "gold": "#D4AF37",
+                        "charcoal": "#36454F",
+                        "silver": "#C0C0C0"
+                    },
+                    fontFamily: {
+                        "sans": ["Work Sans", "sans-serif"],
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "display": ["Playfair Display", "serif"],
+                        "work": ["Work Sans", "sans-serif"],
+                        "cormorant": ["Cormorant Garamond", "serif"],
+                        "manrope": ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-background-dark text-white font-work">
+
+    <!-- Navigation -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-white/5 bg-background-dark/90 backdrop-blur-md px-6 lg:px-8 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 48 48">
+                    <path
+                        d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                    </path>
+                </svg>
+            </div>
+            <span class="text-xl font-display font-black tracking-widest uppercase">Luxe</span>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-10">
+            <a href="index.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+            <a href="menu.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Menu</a>
+            <a href="experience.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Experience</a>
+            <a href="auth.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+            <a href="reservations.html"
+                class="bg-primary text-background-dark px-6 py-2.5 rounded text-xs font-bold uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(242,185,13,0.3)]">
+                Book a Table
+            </a>
+        </nav>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark transform translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white/50 hover:text-white">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a href="index.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+        <a href="menu.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Menu</a>
+        <a href="experience.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Experience</a>
+        <a href="auth.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+        <a href="reservations.html"
+            class="text-2xl font-display uppercase tracking-widest text-primary">Reservations</a>
+    </div>
+
+    <div class="fixed inset-0 pointer-events-none marble-overlay z-0"></div>
+    <main class="relative z-10 pt-32 pb-20 px-6 md:px-12 max-w-[1400px] mx-auto">
+        <div class="mb-16">
+            <span class="text-primary text-[10px] font-bold uppercase tracking-[0.5em] block mb-4">Exclusive
+                Experiences</span>
+            <h1 class="text-5xl md:text-7xl font-cormorant font-light italic text-white leading-tight">Private Dining
+                Reservations</h1>
+            <div class="h-px w-24 bg-primary mt-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-7 space-y-12">
+                <h3 class="text-2xl font-cormorant text-white italic border-b border-white/10 pb-4">Available Suites
+                </h3>
+
+                <div
+                    class="group bg-charcoal/40 border border-white/5 p-6 flex flex-col md:flex-row gap-6 transition-all duration-500 hover:border-primary/30">
+                    <div class="w-full md:w-48 h-48 overflow-hidden rounded">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtDgLqTGy9KXrDn6b7XfGQ3PqLNArjQQ9jAEPEjCql7lk1wtepYHILL5U-Tvyb3fd5BcyscD13RZKcDgrk7_9AmpzAhqveMy-6ObQ-CBELTzcED2VzQDFoQ8Z1X9_rsc1UCPMmI2catoE3TcTAMLq5X6Uf5ntVnA5CyM6P69jPLq8xBgcG1VxMUS4ghnYnf1IZwoHWWXi1PE8Njy7a2KfpWZFEKj8XSICCOYHaB-QoTvmXSjO9cH9-MfgV_uzg7nB8ZR5O9uXuviln"
+                            alt="The Sapphire Suite"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-2xl font-cormorant text-white">The Sapphire Suite</h4>
+                                <span class="text-primary text-xs font-bold tracking-widest">$2,500 Min. Spend</span>
+                            </div>
+                            <p class="text-white/50 text-sm font-light mb-4 leading-relaxed">A sanctuary of deep blues
+                                and velvet textures. Features a private balcony overlooking the city skyline.</p>
+                        </div>
+                        <button
+                            class="bg-primary text-background-dark px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors self-start rounded-md">Select
+                            Suite</button>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-charcoal/40 border border-white/5 p-6 flex flex-col md:flex-row gap-6 transition-all duration-500 hover:border-primary/30">
+                    <div class="w-full md:w-48 h-48 overflow-hidden rounded">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqGJPeToucnlyBQqc4PaZmiHTrmLwV1Q88CHT6DISZNEkYy4WfhO8e1kG5a8zQyasGY74n4NYm7Hg0MeLLkRKB9Q721XQkgIZe7KJi16XecpkQ-7QuLCYVvpPfFzz9ghNMS2iQ_aFlz89ma2PWbwUrgb1ET_v9rmyq_ERTSBAUdmn5WQ9CIKBKwHq2eYc5yzvv2Y6G9peCg9CAXrmgQBTMMeGWyUsd-Gq6ksb5WKoYaLefHYPNQ8XZ6p-qLdZU86jOSk7CXWUx5Zm9"
+                            alt="The Obsidian Room"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-2xl font-cormorant text-white">The Obsidian Room</h4>
+                                <span class="text-primary text-xs font-bold tracking-widest">$3,800 Min. Spend</span>
+                            </div>
+                            <p class="text-white/50 text-sm font-light mb-4 leading-relaxed">Monolithic elegance in
+                                volcanic stone and dark wood. Includes a private chef's finishing kitchen.</p>
+                        </div>
+                        <button
+                            class="bg-primary text-background-dark px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors self-start rounded-md">Select
+                            Suite</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lg:col-span-5">
+                <div class="sticky top-32 bg-charcoal/30 border border-white/10 p-10 backdrop-blur-sm rounded-xl">
+                    <h3 class="text-xl font-cormorant text-white tracking-widest uppercase mb-10">Select Date</h3>
+                    <div class="grid grid-cols-7 gap-1 mb-10" id="calendar-grid">
+                        <!-- JS GENERATED DATES -->
+                    </div>
+                    <div class="space-y-6">
+                        <label class="block text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Group
+                            Size</label>
+                        <select
+                            class="w-full bg-background-dark/50 border-white/10 text-white text-xs py-3 rounded-md mb-4 focus:ring-1 focus:ring-primary focus:border-primary">
+                            <option>2 - 4 Guests</option>
+                            <option>5 - 8 Guests</option>
+                            <option>8 - 12 Guests</option>
+                            <option>Private Suite</option>
+                        </select>
+                        <button
+                            class="w-full bg-primary text-background-dark py-4 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white transition-all duration-500 rounded-md">
+                            Check Availability
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 text-primary">
+                            <svg fill="currentColor" viewBox="0 0 48 48">
+                                <path
+                                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-display font-black tracking-widest uppercase text-white">Luxe</span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed max-w-xs">
+                        Defining the modern culinary landscape with passion, precision, and an unwavering commitment to
+                        excellence.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Contact & Location</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <p>1234 Sapphire Blvd<br />Beverly Hills, CA 90210</p>
+                        <p>+1 (310) 555-0123</p>
+                        <p>concierge@luxedining.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Hours</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Tue — Sat</span>
+                            <span>18:00 — 23:00</span>
+                        </div>
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Sun — Mon</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Newsletter</h5>
+                    <div class="flex border-b border-white/20 pb-2">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-transparent border-none text-white focus:ring-0 p-0 text-sm w-full placeholder:text-white/20" />
+                        <button class="text-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/20 text-[10px] uppercase tracking-widest font-bold">© 2024 LUXE Dining Group.
+                    Culinary Excellence Redefined.</p>
+                <div class="flex gap-10 text-white/20 text-[10px] uppercase tracking-widest font-bold">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // Calendar Logic
+        const calendarGrid = document.getElementById('calendar-grid');
+        let selectedDateElement = null;
+
+        for (let i = 0; i < 30; i++) {
+            const dayDiv = document.createElement('div');
+            dayDiv.textContent = i + 1;
+            dayDiv.className = `aspect-square flex items-center justify-center text-xs border border-white/5 rounded cursor-pointer hover:border-primary/50 transition-colors text-white/70 hover:bg-white/5`;
+
+            if (i === 12) { // Default selection (13th)
+                dayDiv.classList.add('bg-primary', 'text-background-dark', 'border-primary');
+                dayDiv.classList.remove('text-white/70', 'hover:bg-white/5');
+                selectedDateElement = dayDiv;
+            }
+
+            dayDiv.addEventListener('click', () => {
+                if (selectedDateElement) {
+                    selectedDateElement.classList.remove('bg-primary', 'text-background-dark', 'border-primary');
+                    selectedDateElement.classList.add('text-white/70', 'hover:bg-white/5');
+                }
+                dayDiv.classList.add('bg-primary', 'text-background-dark', 'border-primary');
+                dayDiv.classList.remove('text-white/70', 'hover:bg-white/5');
+                selectedDateElement = dayDiv;
+            });
+
+            calendarGrid.appendChild(dayDiv);
+        }
+    </script>
+</body>
+
+</html>

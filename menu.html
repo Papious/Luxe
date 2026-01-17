@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu | LUXE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Work+Sans:wght@200;300;400;600&family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "secondary": "#a6a6a6",
+                        "accent-dark": "#1a1a1a",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#121212",
+                        "gold": "#D4AF37",
+                        "charcoal": "#36454F",
+                        "silver": "#C0C0C0"
+                    },
+                    fontFamily: {
+                        "sans": ["Work Sans", "sans-serif"],
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "display": ["Playfair Display", "serif"],
+                        "work": ["Work Sans", "sans-serif"],
+                        "cormorant": ["Cormorant Garamond", "serif"],
+                        "manrope": ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-background-dark text-white font-work">
+
+    <!-- Navigation -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-white/5 bg-background-dark/90 backdrop-blur-md px-6 lg:px-8 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 48 48">
+                    <path
+                        d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                    </path>
+                </svg>
+            </div>
+            <span class="text-xl font-display font-black tracking-widest uppercase">Luxe</span>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-10">
+            <a href="index.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+            <a href="menu.html"
+                class="text-xs font-semibold uppercase tracking-widest text-primary transition-colors">Menu</a>
+            <a href="experience.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Experience</a>
+            <a href="auth.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+            <a href="reservations.html"
+                class="bg-primary text-background-dark px-6 py-2.5 rounded text-xs font-bold uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(242,185,13,0.3)]">
+                Book a Table
+            </a>
+        </nav>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark transform translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white/50 hover:text-white">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a href="index.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+        <a href="menu.html" class="text-2xl font-display uppercase tracking-widest text-primary">Menu</a>
+        <a href="experience.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Experience</a>
+        <a href="auth.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+        <a href="reservations.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Reservations</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="fixed inset-0 pointer-events-none marble-overlay z-0"></div>
+    <main class="relative z-10 pt-32 pb-20">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+            <div class="relative mb-24 overflow-hidden rounded-xl shadow-2xl">
+                <div class="bg-cover bg-center min-h-[600px] flex flex-col justify-end p-10 md:p-24"
+                    style="background-image: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.2) 50%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGitPj68bc8NdKQoT-ysngTkxtvdymBrW_XLlfKWIW393jiA0UV3CRcLWKxm5fq1rs_7TfqxKBThudlLYa1ZHnj_EwX354zTpuFasF-0ZGUVyxA9FHxPjgH_nzxjOzkLelperHZbyM5zySVIoIBwhISXX0sqEd-u3cDiGGeBojN2CLxzH3KRts_eNlWYe9H82acOy_mKHGTB2Zn63eNQmfPyCP09l2_g39StRn-3-_96yQpZ2w6-HLrEv3LyDxVU4Y5m8F7TYHX_jB')">
+                    <span class="text-primary text-xs font-semibold uppercase tracking-[0.5em] mb-4">The Art of
+                        Gastronomy</span>
+                    <h1 class="text-white text-6xl md:text-9xl font-cormorant font-light italic leading-none mb-6">
+                        Epicurean Menu</h1>
+                    <p class="text-white/70 text-lg md:text-xl max-w-2xl font-light leading-relaxed">A sensory journey
+                        curated by Chef de Cuisine, celebrating the finest ingredients and avant-garde culinary
+                        techniques.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-20 py-10">
+                <!-- Entrees -->
+                <div>
+                    <div class="flex items-center gap-6 mb-12">
+                        <h4 class="text-white text-sm font-bold uppercase tracking-[0.5em]">Les Entrées</h4>
+                        <div class="h-px grow bg-white/10"></div>
+                    </div>
+                    <div class="space-y-14">
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Truffle Arancini</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$24</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">Wild
+                                mushrooms, black truffle aioli, 24k gold leaf garnish, aged parmesan.</p>
+                        </div>
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Heirloom Tomato Tartare</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$22</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">Organic
+                                heritage tomatoes, basil emulsion, toasted pine nuts, balsamic caviar.</p>
+                        </div>
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Hokkaido Scallops</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$34</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">Pan-seared,
+                                cauliflower silk, chorizo crumble, micro-cilantro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats -->
+                <div class="lg:border-l lg:border-white/5 lg:pl-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h4 class="text-white text-sm font-bold uppercase tracking-[0.5em]">Les Plats</h4>
+                        <div class="h-px grow bg-white/10"></div>
+                    </div>
+                    <div class="space-y-14">
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Wagyu Ribeye</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$115</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">A5 grade
+                                Kagoshima, smoked sea salt, parsnip puree, charred shallots.</p>
+                        </div>
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Pan-Seared Sea Bass</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$52</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">Wild-caught,
+                                saffron beurre blanc, baby fennel, citrus segments.</p>
+                        </div>
+                        <div class="group cursor-default">
+                            <div class="flex justify-between items-baseline mb-3">
+                                <h2
+                                    class="text-white text-2xl md:text-3xl font-cormorant font-light tracking-wide group-hover:text-primary transition-colors duration-500">
+                                    Lobster Risotto</h2>
+                                <p class="text-primary font-sans text-sm font-semibold tracking-widest">$64</p>
+                            </div>
+                            <p class="text-white/50 text-sm font-light leading-relaxed font-sans max-w-md">Maine
+                                lobster, carnaroli rice, tarragon, lemon zest, shellfish bisque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 text-primary">
+                            <svg fill="currentColor" viewBox="0 0 48 48">
+                                <path
+                                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-display font-black tracking-widest uppercase text-white">Luxe</span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed max-w-xs">
+                        Defining the modern culinary landscape with passion, precision, and an unwavering commitment to
+                        excellence.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Contact & Location</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <p>1234 Sapphire Blvd<br />Beverly Hills, CA 90210</p>
+                        <p>+1 (310) 555-0123</p>
+                        <p>concierge@luxedining.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Hours</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Tue — Sat</span>
+                            <span>18:00 — 23:00</span>
+                        </div>
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Sun — Mon</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Newsletter</h5>
+                    <div class="flex border-b border-white/20 pb-2">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-transparent border-none text-white focus:ring-0 p-0 text-sm w-full placeholder:text-white/20" />
+                        <button class="text-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/20 text-[10px] uppercase tracking-widest font-bold">© 2024 LUXE Dining Group.
+                    Culinary Excellence Redefined.</p>
+                <div class="flex gap-10 text-white/20 text-[10px] uppercase tracking-widest font-bold">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

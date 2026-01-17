@@ -1,0 +1,62 @@
+@layer base {
+    body {
+        @apply bg-background-dark text-white font-work;
+        scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #f2b90d; border-radius: 3px; }
+}
+
+@layer utilities {
+    .text-shadow { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+    .text-glow { text-shadow: 0 0 20px rgba(242, 185, 13, 0.3); }
+}
+
+/* Custom Animations */
+@keyframes fade-in-scale {
+    0% { opacity: 0; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.animate-fade-in-scale { animation: fade-in-scale 1.5s ease-out forwards; }
+
+@keyframes fade-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 1s ease-out forwards; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.marble-overlay {
+    background-image: url("https://www.transparenttextures.com/patterns/black-marble.png");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.active-nav {
+    background-color: #493f22;
+    color: #f2b90d;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+}

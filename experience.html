@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Experience | LUXE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Work+Sans:wght@200;300;400;600&family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "secondary": "#a6a6a6",
+                        "accent-dark": "#1a1a1a",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#121212",
+                        "gold": "#D4AF37",
+                        "charcoal": "#36454F",
+                        "silver": "#C0C0C0"
+                    },
+                    fontFamily: {
+                        "sans": ["Work Sans", "sans-serif"],
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "display": ["Playfair Display", "serif"],
+                        "work": ["Work Sans", "sans-serif"],
+                        "cormorant": ["Cormorant Garamond", "serif"],
+                        "manrope": ["Manrope", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-background-dark text-white font-work">
+
+    <!-- Navigation -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-white/5 bg-background-dark/90 backdrop-blur-md px-6 lg:px-8 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 48 48">
+                    <path
+                        d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                    </path>
+                </svg>
+            </div>
+            <span class="text-xl font-display font-black tracking-widest uppercase">Luxe</span>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-10">
+            <a href="index.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+            <a href="menu.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Menu</a>
+            <a href="experience.html"
+                class="text-xs font-semibold uppercase tracking-widest text-primary transition-colors">Experience</a>
+            <a href="auth.html"
+                class="text-xs font-semibold uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+            <a href="reservations.html"
+                class="bg-primary text-background-dark px-6 py-2.5 rounded text-xs font-bold uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(242,185,13,0.3)]">
+                Book a Table
+            </a>
+        </nav>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-background-dark transform translate-x-full lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white/50 hover:text-white">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a href="index.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+        <a href="menu.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Menu</a>
+        <a href="experience.html" class="text-2xl font-display uppercase tracking-widest text-primary">Experience</a>
+        <a href="auth.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Members</a>
+        <a href="reservations.html"
+            class="text-2xl font-display uppercase tracking-widest hover:text-primary transition-colors">Reservations</a>
+    </div>
+
+    <!-- Experience Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center parallax-bg animate-fade-in-scale"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnOPwQccLnes-0Giobq1bE-6dgXo7mVh6ptfxVt7SCe3MqzzTef06qHLqjEvLG_RGCMjBeoMRK9rgCepzjNewPGz_nZaVe1XHqqYe1FF8mD7B0o5c1IAKegDmLeyNKqC0Q5zIFqU_Y28BWwJjEI17hiHQqRRdKs9rVLWSuhEy64FbKzsc9ExNxxEOrDwhI3WDzveby8T-IPGqUtVNMvo-7nxGULMpjf7QHYI-ecYw3xI5REEsTTXecFGF3D9KqghKW2p5m8OxrFgRU')">
+            </div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-4">
+            <span
+                class="opacity-0 animate-fade-up delay-100 text-gold uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Unforgettable
+                Journey</span>
+            <h1
+                class="opacity-0 animate-fade-up delay-300 text-white text-6xl md:text-8xl font-display font-black leading-tight mb-8 uppercase italic">
+                The Dining<br /><span class="text-primary not-italic">Experience</span>
+            </h1>
+            <p
+                class="opacity-0 animate-fade-up delay-500 text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-10">
+                Step into an immersive world where every detail is choreographed for your comfort. A blend of
+                contemporary elegance and timeless intimacy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ambiance Section -->
+    <section class="py-16 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 border border-primary/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
+                    </div>
+                    <img alt="Atmosphere" class="w-full aspect-[4/3] lg:aspect-[4/5] object-cover rounded shadow-2xl"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqfr9Sd7zAIjWdM-qb79VnEWWnSh9EJQEJKKJgNqehPFsaCFTvu-pygAfj0tFlviOemiNttERSNwFDF0o19rzvSqlnWW-F2Qb-2SJ-EUdwMDAVIkwcXDz2LaW2-qUi0uHwGSsZQr8-viIrN_I0rqqgPT2ZGL1PYhkYv13crDPi1vZAuP42euwIMtf65RQw4C2LpcnqbkL5j8sSxXK-oucTqLghhszc96VfKPmCld2dKTVnKp8Kx2oOPxFT4zmHiuXJE8rdeJp8ysIm" />
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="h-[2px] w-10 bg-primary"></div>
+                        <span class="text-primary uppercase tracking-[0.3em] text-xs font-bold">The Ambiance</span>
+                    </div>
+                    <h2 class="text-white text-5xl md:text-6xl font-display font-black leading-tight uppercase italic">
+                        Atmosphere<br /><span class="not-italic">& Artistry</span>
+                    </h2>
+                    <p class="text-white/60 text-lg leading-relaxed font-light">
+                        Our dining room is a sanctuary of sensory delights. From the custom-designed velvet seating to
+                        the hand-blown glass chandeliers, every element serves to heighten the anticipation of the meal
+                        ahead.
+                    </p>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-background-dark px-10 py-4 uppercase text-xs font-bold tracking-[0.2em] transition-all rounded-md">
+                        View Architecture
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 text-primary">
+                            <svg fill="currentColor" viewBox="0 0 48 48">
+                                <path
+                                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-display font-black tracking-widest uppercase text-white">Luxe</span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed max-w-xs">
+                        Defining the modern culinary landscape with passion, precision, and an unwavering commitment to
+                        excellence.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Contact & Location</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <p>1234 Sapphire Blvd<br />Beverly Hills, CA 90210</p>
+                        <p>+1 (310) 555-0123</p>
+                        <p>concierge@luxedining.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Hours</h5>
+                    <div class="space-y-4 text-white/50 text-sm">
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Tue — Sat</span>
+                            <span>18:00 — 23:00</span>
+                        </div>
+                        <div class="flex justify-between max-w-[200px]">
+                            <span>Sun — Mon</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-8">Newsletter</h5>
+                    <div class="flex border-b border-white/20 pb-2">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-transparent border-none text-white focus:ring-0 p-0 text-sm w-full placeholder:text-white/20" />
+                        <button class="text-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-white/20 text-[10px] uppercase tracking-widest font-bold">© 2024 LUXE Dining Group.
+                    Culinary Excellence Redefined.</p>
+                <div class="flex gap-10 text-white/20 text-[10px] uppercase tracking-widest font-bold">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
